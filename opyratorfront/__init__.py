@@ -14,11 +14,11 @@
 ...     'Returns the `message` of the input data.'
 ...     return Output(message=input.message)
 
-Putting this in a file named ```` and running
+Putting this in a file named ``my_opurator.py`` and running
 
-```
-opyrator launch-ui my_opyrator:hello_world
-```
+.. code-block::
+    opyrator launch-ui my_opyrator:hello_world
+
 
 from the command-line, we get a fully functional web GUI for the `hello_world` function.
 
