@@ -26,4 +26,3 @@ But to use `opyrator` you need to make those input and output models by hand.
 Or do you?...
 
 """
-
