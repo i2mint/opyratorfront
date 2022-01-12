@@ -14,19 +14,22 @@ To install:	```pip install opyratorfront```
 
 ``opyrator`` allows us to write code like this:
 
->>> from pydantic import BaseModel
->>>
->>> class Input(BaseModel):
-...     message: str
-...
->>> class Output(BaseModel):
-...     message: str
-...
->>> def hello_world(input: Input) -> Output:
-...     'Returns the `message` of the input data.'
-...     return Output(message=input.message)
+```python
+from pydantic import BaseModel
 
-Putting this in a file named ```` and running
+class Input(BaseModel):
+    message: str
+
+class Output(BaseModel):
+    message: str
+
+def hello_world(input: Input) -> Output:
+    """Returns the `message` of the input data."""
+    return Output(message=input.message)
+
+```
+
+Putting this in a file named ``my_opyrator.py`` and running
 
 ```
 opyrator launch-ui my_opyrator:hello_world
