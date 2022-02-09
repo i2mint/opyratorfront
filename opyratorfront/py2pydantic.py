@@ -23,85 +23,8 @@ formula1(w=1, x=2.0, z=1, y=1)
 
 """
 
-from typing import Callable, Any
-from functools import partial
+from front.py2pydantic import *
 
-from pydantic import BaseModel, create_model
-from i2 import Sig, name_of_obj, empty_param_attr
-from i2.wrapper import wrap
+from warnings import warn
 
-
-def pyd_func_ingress_template(input_model_instance, wrapped_func_sig: Sig):
-    kwargs = dict(input_model_instance)
-    args, kwargs = wrapped_func_sig.args_and_kwargs_from_kwargs(kwargs)
-    return args, kwargs
-
-
-# TODO: Add the output model annotation
-def func_to_pyd_func(func: Callable, dflt_type=Any):
-    """Get a 'opyrator' function from a python function.
-    That is, a function that has a single pydantic model input and output.
-    """
-    pyd_func_ingress = partial(pyd_func_ingress_template, wrapped_func_sig=Sig(func))
-
-    input_model = func_to_pyd_input_model_cls(func, dflt_type)
-    output_model = create_model(
-        "output_model", output_val=(Any, ...)
-    )  # TODO: Work on this
-    # TODO: Inject annotations in pyd_func_ingress
-
-    return wrap(func, ingress=pyd_func_ingress)
-
-
-def func_to_pyd_input_model_cls(func: Callable, dflt_type=Any, name=None):
-    """Get a pydantic model of the arguments of a python function"""
-    name = name or name_of_obj(func)
-    return create_model(name, **dict(func_to_pyd_model_specs(func, dflt_type)))
-
-
-def func_to_pyd_model_specs(func: Callable, dflt_type=Any):
-    """Helper function to get field info from python signature parameters"""
-    for p in Sig(func).params:
-        if p.annotation is not empty_param_attr:
-            if p.default is not empty_param_attr:
-                yield p.name, (p.annotation, p.default)
-            else:
-                yield p.name, (p.annotation, ...)
-        else:  # no annotations
-            if p.default is not empty_param_attr:
-                yield p.name, p.default
-            else:
-                yield p.name, (dflt_type, ...)
-
-
-def pydantic_egress(output):
-    return_type = type(output)
-    mod = create_model("Output", output_val=return_type)
-
-    return mod(output_val=output)
-
-
-# ---------------------------------------------------------------------------------------
-# Tests
-
-
-def test_func_to_pyd_model_of_inputs(func: Callable, dflt_type=Any):
-    pyd_model = func_to_pyd_input_model_cls(func, dflt_type)
-    sig = Sig(func)
-    # # TODO: Don't want to use hidden __fields__. Other "official" access to this info?
-    # the names of the arguments should correspond to names of the model's fields:
-    assert sorted(sig.names) == sorted(pyd_model.__fields__)
-    # and for each field, name, default, and sometimes annotations/types should match...
-    for name, model_field in pyd_model.__fields__.items():
-        param = sig.parameters[name]
-        expected_default = (
-            param.default if param.default is not empty_param_attr else None
-        )
-        assert model_field.default == expected_default
-        if param.annotation is not empty_param_attr:
-            # if arg is annotated, expect that as the field type
-            assert model_field.type_ == param.annotation
-        elif param.default is empty_param_attr:
-            # if arg is not annotated and doesn't have a default, expect dflt_type
-            assert model_field.type_ == dflt_type
-        # but don't test pydantic's resolution of types from default values
+warn(f"Module moved to front.py2pydantic: {__file__}")
