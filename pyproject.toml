@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "opyratorfront"
-version = "0.1.1"
+version = "0.1.2"
 description = "Generate opyrator UIs and webservices and docker containers from python functions"
 readme = "README.md"
 requires-python = ">=3.10"
