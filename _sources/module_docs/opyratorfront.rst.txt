@@ -1,4 +1,0 @@
-opyratorfront
-=============
-.. automodule:: opyratorfront
-   :members:

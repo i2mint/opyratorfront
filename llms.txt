@@ -1,0 +1,20 @@
+# opyratorfront
+
+> Generate opyrator UIs and webservices and docker containers from python functions
+
+
+## Pages
+
+- [opyratorfront](index.html.md): Generate opyrator UIs and webservices and docker containers from python functions
+- [API reference](api.html.md): | &#96;opyratorfront&#96;   | Even quicker way to get webservices, docker containers and GUIs from opyrator ...
+- [opyratorfront](_autosummary/opyratorfront.html.md): Even quicker way to get webservices, docker containers and GUIs from opyrator
+- [opyratorfront.py2pydantic](_autosummary/opyratorfront.py2pydantic.html.md): Deprecated alias of &#96;front.py2pydantic&#96;.
+- [About this build](about-this-build.html.md): This documentation was built on &#42;&#42;2026-10-30 13:04 UTC&#42;&#42; from commit &lt;a href="https://github.com/i2m...
+
+## Optional
+
+- [opyratorfront.md](opyratorfront.md): Complete documentation in a single file.
+
+## Build
+
+- [build_info.json](build_info.json): build provenance (commit, version, tool versions, whether the docs match the package)

@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "built_at": "2026-10-30T13:04:44Z",
+  "package": {
+    "name": "opyratorfront",
+    "version": "0.1.2",
+    "display_name": "opyratorfront",
+    "source": "pyproject.toml"
+  },
+  "git": {
+    "available": true,
+    "commit": "9b89938fac25a23066a2deb939aa18157918ea94",
+    "short_commit": "9b89938",
+    "branch": "master",
+    "tags": [],
+    "dirty": false,
+    "remote_url": "https://github.com/i2mint/opyratorfront",
+    "commit_url": "https://github.com/i2mint/opyratorfront/commit/9b89938fac25a23066a2deb939aa18157918ea94",
+    "error": null
+  },
+  "ci": {
+    "provider": "github",
+    "repository": "i2mint/opyratorfront",
+    "sha": "9b89938fac25a23066a2deb939aa18157918ea94",
+    "sha_in_history": true,
+    "ref": "refs/heads/master",
+    "ref_name": "master",
+    "run_id": "41060054049",
+    "run_url": "https://github.com/i2mint/opyratorfront/actions/runs/41060054049",
+    "server_url": "https://github.com"
+  },
+  "tools": {
+    "epythet": "0.2.22",
+    "sphinx": "9.1.1",
+    "docutils": "0.22.4",
+    "python": "3.12.15"
+  },
+  "config": {
+    "theme": "auto",
+    "html_theme": "shibuya",
+    "accent": "#006e50",
+    "mode": "auto",
+    "api_generator": "autosummary",
+    "ignore": [
+      "tests/",
+      "scrap/",
+      "examples/"
+    ],
+    "agent_outputs": true,
+    "aggregates": [
+      "md"
+    ],
+    "ai_artifacts": true,
+    "provenance": true,
+    "docs_dir": "docsrc"
+  },
+  "site": {
+    "modules_documented": 2,
+    "objects_documented": 0
+  },
+  "pypi": {
+    "checked": true,
+    "latest": "0.1.3",
+    "relation": "behind",
+    "error": null
+  },
+  "reproduce": "git clone https://github.com/i2mint/opyratorfront && cd opyratorfront\ngit checkout 9b89938fac25a23066a2deb939aa18157918ea94\npip install \"epythet==0.2.22\"\nepythet quickstart . --ignore tests/ scrap/ examples/",
+  "warnings": [],
+  "alignment": {
+    "aligned": false,
+    "notes": [
+      "The documented version (0.1.2) is behind the latest release on PyPI (0.1.3): `pip install opyratorfront` gives newer code than these docs describe."
+    ]
+  }
+}

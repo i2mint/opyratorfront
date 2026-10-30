@@ -1,0 +1,13 @@
+# opyratorfront
+
+> Generate opyrator UIs and webservices and docker containers from python functions
+
+
+## Pages in this subsection
+
+- [opyratorfront](opyratorfront.html.md): Even quicker way to get webservices, docker containers and GUIs from opyrator
+- [opyratorfront.py2pydantic](opyratorfront.py2pydantic.html.md): Deprecated alias of &#96;front.py2pydantic&#96;.
+
+## Optional
+
+- [Top-level llms.txt](../llms.txt): Complete documentation index.

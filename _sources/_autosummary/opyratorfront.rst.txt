@@ -1,0 +1,13 @@
+﻿opyratorfront
+=============
+
+.. automodule:: opyratorfront
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   py2pydantic
