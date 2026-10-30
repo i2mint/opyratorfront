@@ -36,7 +36,6 @@ authors = [
     { name = "Thor Whalen" },
 ]
 dependencies = [
-    "opyrator",
     "i2",
     "front",
 ]
