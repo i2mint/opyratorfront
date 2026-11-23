@@ -25,4 +25,8 @@ from front.py2pydantic import *  # noqa: F401,F403
 
 from warnings import warn
 
-warn(f"Module moved to front.py2pydantic: {__file__}")
+warn(
+    "opyratorfront.py2pydantic is deprecated: import from front.py2pydantic instead.",
+    DeprecationWarning,
+    stacklevel=2,
+)
