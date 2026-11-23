@@ -4,6 +4,8 @@
 
 Generate opyrator UIs and webservices and docker containers from python functions
 
+> **Deprecated.** The implementation moved to [`front`](https://github.com/i2mint/front) in 2022: use `front.py2pydantic`. `opyratorfront.py2pydantic` still works as a re-export and raises a `DeprecationWarning` on import.
+
 To install:	`pip install opyratorfront`
 
 # What it’s about

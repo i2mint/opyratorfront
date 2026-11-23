@@ -1,4 +1,4 @@
-> built 2026-10-30 13:04 UTC from 9b89938 (master) · opyratorfront 0.1.2. Details: build_info.json
+> built 2026-11-23 23:08 UTC from ff1716d (master) · opyratorfront 0.1.3. Details: build_info.json
 
 # index.html.md
 
@@ -7,6 +7,8 @@
 # opyratorfront
 
 Generate opyrator UIs and webservices and docker containers from python functions
+
+> **Deprecated.** The implementation moved to [`front`](https://github.com/i2mint/front) in 2022: use `front.py2pydantic`. `opyratorfront.py2pydantic` still works as a re-export and raises a `DeprecationWarning` on import.
 
 To install:	`pip install opyratorfront`
 
@@ -144,18 +146,18 @@ True
 
 # About this build
 
-This documentation was built on **2026-10-30 13:04 UTC** from commit <a href="https://github.com/i2mint/opyratorfront/commit/9b89938fac25a23066a2deb939aa18157918ea94"><code>9b89938</code></a> on branch <code>master</code>, for **opyratorfront 0.1.2** (from <code>pyproject.toml</code>).
+This documentation was built on **2026-11-23 23:08 UTC** from commit <a href="https://github.com/i2mint/opyratorfront/commit/ff1716df2278366569f69d6039a11cb1b2feb724"><code>ff1716d</code></a> on branch <code>master</code>, for **opyratorfront 0.1.3** (from <code>pyproject.toml</code>).
 
 #### WARNING
 The documentation and the package may be misaligned:
 
-- The documented version (0.1.2) is behind the latest release on PyPI (0.1.3): `pip install opyratorfront` gives newer code than these docs describe.
+- The documented version (0.1.3) is behind the latest release on PyPI (0.1.4): `pip install opyratorfront` gives newer code than these docs describe.
 
 ## Source
 
 |                     |                                                                                                                                                             |
 |---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Commit              | <a href="https://github.com/i2mint/opyratorfront/commit/9b89938fac25a23066a2deb939aa18157918ea94"><code>9b89938fac25a23066a2deb939aa18157918ea94</code></a> |
+| Commit              | <a href="https://github.com/i2mint/opyratorfront/commit/ff1716df2278366569f69d6039a11cb1b2feb724"><code>ff1716df2278366569f69d6039a11cb1b2feb724</code></a> |
 | Branch              | <code>master</code>                                                                                                                                         |
 | Tags at this commit | none                                                                                                                                                        |
 | Working tree        | clean                                                                                                                                                       |
@@ -166,18 +168,18 @@ The documentation and the package may be misaligned:
 |              |                                                                                            |
 |--------------|--------------------------------------------------------------------------------------------|
 | Repository   | <code>i2mint/opyratorfront</code>                                                          |
-| Run          | <a href="https://github.com/i2mint/opyratorfront/actions/runs/41060054049">41060054049</a> |
+| Run          | <a href="https://github.com/i2mint/opyratorfront/actions/runs/45285867276">45285867276</a> |
 | Ref          | <code>refs/heads/master</code>                                                             |
-| Event commit | <code>9b89938fac25a23066a2deb939aa18157918ea94</code> (in the history of the built commit) |
+| Event commit | <code>ff1716df2278366569f69d6039a11cb1b2feb724</code> (in the history of the built commit) |
 
 ## Tools
 
 |          |         |
 |----------|---------|
-| epythet  | 0.2.22  |
+| epythet  | 0.2.25  |
 | Sphinx   | 9.1.1   |
 | docutils | 0.22.4  |
-| Python   | 3.12.15 |
+| Python   | 3.12.16 |
 
 ## Configuration as resolved
 
@@ -193,14 +195,14 @@ The documentation and the package may be misaligned:
 
 ## Package on PyPI
 
-Latest release: <a href="https://pypi.org/project/opyratorfront/0.1.3/">0.1.3</a>, newer than the documented version (0.1.2).
+Latest release: <a href="https://pypi.org/project/opyratorfront/0.1.4/">0.1.4</a>, newer than the documented version (0.1.3).
 
 ## Reproduce
 
 ```bash
 git clone https://github.com/i2mint/opyratorfront && cd opyratorfront
-git checkout 9b89938fac25a23066a2deb939aa18157918ea94
-pip install "epythet==0.2.22"
+git checkout ff1716df2278366569f69d6039a11cb1b2feb724
+pip install "epythet==0.2.25"
 epythet quickstart . --ignore tests/ scrap/ examples/
 ```
 
